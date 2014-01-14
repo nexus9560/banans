@@ -185,25 +185,7 @@ public class ChatWindow extends JFrame{
         return reqd<=curr.getStatus();
     }
     
-    public void recieveMessage() throws IOException{
-        Socket s = new Socket("localhost", 9090);
-        BufferedReader input =
-            new BufferedReader(new InputStreamReader(s.getInputStream()));
-        chat.append(input.readLine()+"\n");
-    }
-    
-    public void sendMessage(){
-        try{
-            try (ServerSocket listener = new ServerSocket(9090)) {
-                while (true) {
-                    try (Socket socket = listener.accept()) {
-                        PrintWriter outp =new PrintWriter(socket.getOutputStream(), true);
-                        outp.println(message.getText()+"\n");
-                    }
-                }
-            }
-        }catch (IOException i){}
-    }
+    class NetworkingRelated{}
     
     class EnterAction implements KeyListener{
 
