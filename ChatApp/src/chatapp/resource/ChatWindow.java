@@ -185,7 +185,7 @@ public class ChatWindow extends JFrame{
         return reqd<=curr.getStatus();
     }
     
-    class NetworkingRelated{}
+    private class NetworkingRelated{}
     
     class EnterAction implements KeyListener{
 
