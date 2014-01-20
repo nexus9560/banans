@@ -3,7 +3,6 @@ import chatapp.client.LoginWindow;
 import chatapp.server.ChatServer;
 import java.awt.*;
 import java.awt.event.*;
-import java.io.*;
 import java.net.*;
 import java.text.*;
 import java.util.*;
